@@ -161,7 +161,9 @@ const CompaniesProvider = ({ children }) => {
 
   async function handleTags() {
     try {
-      const tagList = await api.get(`/tags/select`);
+      const tagList = await api.get(
+        `https://conectavagas.inf.ufsm.br/tags/select`
+      );
       setTags(tagList.data);
     } catch (error) {
       console.log(error);
